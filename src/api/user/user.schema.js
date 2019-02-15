@@ -8,7 +8,8 @@ const user = new mongoose.Schema({
   avatar: String,
   username: { type: String, required: true },
   password: { type: String, required: true, select: false },
-  signUpDate: { type: Date, default: Date.now() }
+  signUpDate: { type: Date, default: Date.now() },
+  lastLogin: Date
 });
 
 module.exports = restful.model('user', user);
