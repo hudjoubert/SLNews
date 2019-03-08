@@ -11,4 +11,5 @@ const UserSchema = new mongoose.Schema({
   signUpDate: { type: Date, default: Date.now() }
 });
 
-module.exports = restful.model('User', UserSchema);
+const User = restful.model('User', UserSchema);
+module.exports = User;

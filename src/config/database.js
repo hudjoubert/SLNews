@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 module.exports = mongoose.connect(
   'mongodb+srv://admin:hj123456@slnews-4eufq.mongodb.net/SLNews?retryWrites=true',
   { useNewUrlParser: true },
