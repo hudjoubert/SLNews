@@ -4,13 +4,17 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 module.exports = mongoose.connect(
-  'mongodb+srv://admin:hj123456@slnews-4eufq.mongodb.net/SLNews?retryWrites=true',
+  'mongodb://localhost/slnews',
   { useNewUrlParser: true },
   err => {
     if (!err) {
       console.log('Conectado no banco com sucesso.');
     } else {
       console.log('Erro ao conectar: ' + err);
+      console.log('Erro ao conectar: ' + err.code);
+      console.log('Erro ao conectar: ' + err.errmsg);
+      console.log('Erro ao conectar: ' + err.name);
+      console.log('Erro ao conectar: ' + err.stack);
     }
   }
 );
